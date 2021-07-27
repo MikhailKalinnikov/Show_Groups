@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+Создайте SPA с использованием фреймворка react.js. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение имеет 2 роута: 
+страница приветствия (свободное оформление)
+страница выводящая список пользователей
 
-## Available Scripts
+Приложение загружает данные в формате json с сервера (без разницы какой. Можно мок сделать, можно загрузить из общедоступных сервисов) и выводит данные.
 
-In the project directory, you can run:
+Атрибуты пользователя:
+Имя
+Фамилия
+Группа (например Руководство, Бухгалтерия, Отдел кадров и т.д.). Может быть пустым.
 
-### `yarn start`
+Карточек пользователей должно быть минимум 300, групп - минимум 4.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Реализовать 2 варианта отображения данных:
+общая таблица со всеми пользователями
+таблицы пользователей, аналогичные первому пункту, в которых пользователи сгруппированы по группе
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Списки пользователей должны быть сортируемыми. Должна быть доступна сортировка по атрибуту фамилия и имя с возможностью выбора направления сортировки: от А до Я и от Я до А. Обратить внимание на производительность для операций сортировки.
 
-### `yarn test`
+Предусмотреть модальную всплывающую форму, с помощью которой можно добавить нового пользователя с перечисленными выше атрибутами.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Приложение должно быть адаптивно. Допускается использовать любой css-фреймворк или свои css-правила. 
 
-### `yarn build`
+Допускается использовать любой пакет npm и другие вспомогательные средства для разработки и оформления UI (приветствуется, http://www.material-ui.com/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Обязательно наличие unit-тестов.

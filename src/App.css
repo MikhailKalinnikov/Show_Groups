@@ -27,6 +27,9 @@
 .App-link {
   color: #61dafb;
 }
+#menugroupsname{
+  font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin)
+}
 
 @keyframes App-logo-spin {
   from {

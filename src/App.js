@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./index.css";
+import Main from "./Components/Main";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import GroupsList from "./Components/GroupsList";
+import ModalW from "./Components/ModalW";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        {/* <Home /> */}
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/main">
+          <Main />
+        </Route>
+        <Route path="/groupslist/:id">
+          <GroupsList />
+        </Route>
+        <Route path="/modalw">
+          <ModalW />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
